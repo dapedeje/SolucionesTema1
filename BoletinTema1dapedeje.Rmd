@@ -63,4 +63,26 @@ knit_hooks$set(inline = function(x) {
 #knit_hooks$set(plot = knitr:::hook_plot_html)
 ```
 
+1. Considera los conjuntos de datos mammals del paquete MASS y Animals2 del paquete robustbase.
+
+a. Mira la las características de ambos conjuntos usando la ayuda.
+b. Usa las funciones dim, head, tail, str para una primera visión de los conjuntos de datos.
+c. Muestra los nombres de las filas y las columnas (rownames, colnames)
+d. Usa la función intersect y almacena en la variable commonAnimals los aminales que aparezcan
+en ambos conjuntos
+e. Usa setdiff para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son ?. ¿Qué tipo
+de animales son?
+f. Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
+
+```{r}
+library(MASS)
+library(robustbase)
+mamm<-data("mammals")
+animales<-data("Animals2")
+#a Veremos que nos dice el comando ayuda
+help(mammals)#Relacion entre el tamaño del cuerpo y el cerebro
+help(Animals2)#La misma relacion pero tiene 65 especies
+
+```
+
 
