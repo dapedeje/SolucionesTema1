@@ -109,6 +109,14 @@ colnames(Animals2)
 #Debemos usar la función con el nombre de las filas
 commonAnimals <- intersect(rownames(Animals2), rownames(mammals))
 
+#e
+#Ahora haremos lo contrario con setdiff
+anifalt<-setdiff(rownames(Animals2), rownames(mammals))
+anifalt#Podemos ver que son dinosaurios y animales articos
+
+#f
+#Si nos fijamos el las criaturas que son discordantes son dinosaurios o animales
+#articos, salvo por el topo.
 
 
 ```
