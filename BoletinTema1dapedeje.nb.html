@@ -1787,21 +1787,128 @@ conjuntos.</li>
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShNQVNTKVxubGlicmFyeShyb2J1c3RiYXNlKVxubWFtbTwtZGF0YShcIm1hbW1hbHNcIilcbmFuaW1hbGVzPC1kYXRhKFwiQW5pbWFsczJcIilcbiNhIFZlcmVtb3MgcXVlIG5vcyBkaWNlIGVsIGNvbWFuZG8gYXl1ZGFcbmhlbHAobWFtbWFscykjUmVsYWNpb24gZW50cmUgZWwgdGFtYcOxbyBkZWwgY3VlcnBvIHkgZWwgY2VyZWJyb1xuaGVscChBbmltYWxzMilcblxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShNQVNTKVxubGlicmFyeShyb2J1c3RiYXNlKVxuZGF0YShcIm1hbW1hbHNcIilcbmRhdGEoXCJBbmltYWxzMlwiKVxuI2EgVmVyZW1vcyBxdWUgbm9zIGRpY2UgZWwgY29tYW5kbyBheXVkYVxuaGVscChtYW1tYWxzKSNSZWxhY2lvbiBlbnRyZSBlbCB0YW1hw7FvIGRlbCBjdWVycG8geSBlbCBjZXJlYnJvXG5oZWxwKEFuaW1hbHMyKSNMYSBtaXNtYSByZWxhY2lvbiBwZXJvIHRpZW5lIDY1IGVzcGVjaWVzXG5cbiNiXG4jUGFyYSBlbCBjb25qdW50byBtYW1tYWxzXG5kaW0obWFtbWFscylcbmBgYCJ9 -->
 <pre class="r"><code>library(MASS)
 library(robustbase)
-mamm&lt;-data(&quot;mammals&quot;)
-animales&lt;-data(&quot;Animals2&quot;)
+data(&quot;mammals&quot;)
+data(&quot;Animals2&quot;)
 #a Veremos que nos dice el comando ayuda
 help(mammals)#Relacion entre el tamaño del cuerpo y el cerebro
-help(Animals2)
+help(Animals2)#La misma relacion pero tiene 65 especies
+
+#b
+#Para el conjunto mammals
+dim(mammals)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDYyICAyXG4ifQ== -->
+<pre><code>[1] 62  2</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChtYW1tYWxzKVxuYGBgIn0= -->
+<pre class="r"><code>head(mammals)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Miwic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFCblZTdjA4Yk1SVDI1Y2VsdWFva0VzelZyU0RsTWpCUXFhbzRXa1NtcWlvQ2lVcDBjQnpuWW5HeFQ0N0RRU1JHNXM1bFplblVtUkh4VDNSRDdjek1DbjEzdmhlRmE3Rmt2ZmMrKzN2djgzdmUzVDVZOXc0OFFraVYxQ29PcWRiQkpmWDl2WjNPR3dJSUJBNnBrV1ptVCtEU01qZ1p1QVRiRFYrdXpQNzBmcTVzM2w1OXZqdC9mYlY1L3oxYkYrRlpPOHRDd3Zkcjc1TExYMTc0OXNmOXpiZkQxVGx2SjdUblhXS3R2NTZ2Y0piWStPdHZhdyt2N1lXblF1cVNqdmtFbkhZdXhvSzF2aHFjNG9XK3BrS1dXRTJ0MG1DUjZSWUgzcFptUmpCL3FFNFErWlRHL2xqSkk0NFpXeC9WVkJwSTZ2YzVQZWE2Z0tzZlZJcnBlNXFmK3FtS2h5aW9wNmdwSzJjeG5XQjlCTDBCTlRRWWFwQUcwVU9KMGxDSkVVb0NxWkwxdnBVUjhtTzcwSGVld1lsTithU2d5N2cwOEFZN0RTZjhRc2gvV0l1TVJzQW9HL0Z1Q1c0RzNhR0lwdnFmQTBlWGdOWlVacTBmZE5ob0tvODZHeVhscndyckx2Z1YyNGpLWTVHcWhUM2tXaXNjUUkyemtVS1JNTm9KalRpR0tkVlN5QWhEcHNaamVEZEtCK0VCalVVa2NaU0RSR0JTSStaZnljc2ZIaVRVakFya1JjWmNpRjB1SXlHeGFqMm1mUjRYd1JKOHVmekhCWWtXODlJZW9KUEFLRVBqZVJFVkkyTEg5ZkFYb3Fhb2FaZ0RBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["body"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["brain"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"3.385","2":"44.5","_rn_":"Arctic fox"},{"1":"0.480","2":"15.5","_rn_":"Owl monkey"},{"1":"1.350","2":"8.1","_rn_":"Mountain beaver"},{"1":"465.000","2":"423.0","_rn_":"Cow"},{"1":"36.330","2":"119.5","_rn_":"Grey wolf"},{"1":"27.660","2":"115.0","_rn_":"Goat"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFpbChtYW1tYWxzKVxuYGBgIn0= -->
+<pre class="r"><code>tail(mammals)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Miwic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFCblZTc1U3RE1CQjEyalJ0STBHUjJGRW50b2FCQVJoUUl3UkliSUNLQk9QVmNST0wxQTVPU29HZDcyRGdGeGdRQXpNRHpId0VIVmhaQUNlMnF4TGdwT2p1M3ZuZHZaeDl1SDI4Nmg2N0NLRXFzaXNXcXRaa2lHcEh2ZDNPT3BLSVRDeGtvMmJ1TCtTaFJSbms0THo4SEwrQkN2TUQ1YnVUNTl4ZXVoOXYxMHYzQjVQdXc4M2orZFBkaHIvd2Z2dnFicDVOZVJ1YVI5cksyNHJuTDJ0djYvcmVhbUVsSVRVR1E1TEtZS0VRbzBDN3o0TkxjNkF2Z0xJU3F5bjQySnRsT3JwUTM4RVJEUmpvdExVbDRJckdGRmc3ZzRRS0RUczl3Z1RCcHRsK0JER3drSml5MnhPRXROTklrTEZwZTBpQzlvQmZsTVhqR0ZJandZQnVBQmw0QXlIVnlleXpSS256SktPY1NWSWxYMzhySnhSbFpTYTIvc0dSYXZsam9JTUp5NlI0ZFNHV2Y0TFFINnhaUnQzRGdDT3lVb0tiM3NxQWhpUHhxMkNKRXRBYXNYejdRUWRISTNiYVdTc3BuOVBlbVlrcmFoR1ZMOTJxWlhaSWhPQm04emJCRVRjaTVlMm1FQktUamtFd3lrS1RZajRjeXY4MjBxVndEMklhTWcxVWc0U2FwaG1kdmlhMytIRXZnU3pTU0NObnp1UU9ZU0ZsWm1vdGhqNkpkVEl2WDEzeDZMeEUwT2xvVjZLcGwvRU00dWtRSGh0RVhkZm5ONjFzWFZLYkF3QUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["body"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["brain"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"3.000","2":"25.0","_rn_":"Echidna"},{"1":"160.000","2":"169.0","_rn_":"Brazilian tapir"},{"1":"0.900","2":"2.6","_rn_":"Tenrec"},{"1":"1.620","2":"11.4","_rn_":"Phalanger"},{"1":"0.104","2":"2.5","_rn_":"Tree shrew"},{"1":"4.235","2":"50.4","_rn_":"Red fox"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyKG1hbW1hbHMpXG5gYGAifQ== -->
+<pre class="r"><code>str(mammals)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJ2RhdGEuZnJhbWUnOlx0NjIgb2JzLiBvZiAgMiB2YXJpYWJsZXM6XG4gJCBib2R5IDogbnVtICAzLjM4IDAuNDggMS4zNSA0NjUgMzYuMzMgLi4uXG4gJCBicmFpbjogbnVtICA0NC41IDE1LjUgOC4xIDQyMyAxMTkuNSAuLi5cbiJ9 -->
+<pre><code>&#39;data.frame&#39;:   62 obs. of  2 variables:
+ $ body : num  3.38 0.48 1.35 465 36.33 ...
+ $ brain: num  44.5 15.5 8.1 423 119.5 ...</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1BhcmEgZWwgb3RybyBjb25qdW50b1xuZGltKEFuaW1hbHMyKVxuYGBgIn0= -->
+<pre class="r"><code>#Para el otro conjunto
+dim(Animals2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDY1ICAyXG4ifQ== -->
+<pre><code>[1] 65  2</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChBbmltYWxzMilcbmBgYCJ9 -->
+<pre class="r"><code>head(Animals2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Miwic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFCblZTelc0VE1SRDI1bWRERnJXSmhOUnpyaUJsZStnQnBDcktxbFNOT0hCQklBV3BISnhkWjJPeHNTMnZ0eUZJUEVQUGNJVkRId1AxMEZkQTRzUWpjT2sxTUx2MlJNa2lSckk4ODltZjUvUE12RHFmbmdUVGdCRFNKSzJHUjVwdGNFbjd6ZXVMNFRNQ0NBUWVhWkZ1dVgrQVM0L0FLY0ZEV1A3NC9uTnBYNkpQL1pKRm9yTW5JL1gxUnhDZDN0emZYbDgrSHYrR1lLUytSWGMvaWJPS0Z3MU9Lb3MrS3N0Nzk4dnVsOS90Zm1RdlJ5K1F0aWVrTGVpUzVlRDBLekVXYk0xa3NzWUxNMDI1cUxHNldxN0NYYWJ2RG5vdlpTRU1FQVl6UnErWWRuRHp1VndoZGFMWmVyQ1MyUnlUVFNRMXpnOG1CUmVNRGhSUEhmTHduS3VNeTBUR1JWNlhIbWMwUndFSUJnazFOSnhyMEFiUnBrYnBTR1c0RkVCcWxNWHZsWVRxMkJyNjNuOXdZcC9jUytqSFRCajRxRzJIRjczRk11K3hkaG1kTUtieGdoM1g0RzU0UE9kcG9mODU4SFFONkJXaXJIMHlqQmVGZUQ5OFdsTis0SFoveDIvWVFqVCt1S2Q2V0VPbXRjUXV0Vmk4a0NnU2VwdlRsR0c0b2xwd2dWM3B4SEs1aEgramRCQWUwb3luQXZ1ZEtJNlBHcjZkcGFENmVLaW9XVGprUWNuY2lYMG1VcGdBVkpmUkdjdGNjQWd6VjQxY3FEVGZwZzRBelVNakRjMjJTV1NHaUczWDVpOHRRcUxObVFNQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["body"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["brain"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"1.35","2":"8.1","_rn_":"Mountain beaver"},{"1":"465.00","2":"423.0","_rn_":"Cow"},{"1":"36.33","2":"119.5","_rn_":"Grey wolf"},{"1":"27.66","2":"115.0","_rn_":"Goat"},{"1":"1.04","2":"5.5","_rn_":"Guinea pig"},{"1":"11700.00","2":"50.0","_rn_":"Dipliodocus"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFpbChBbmltYWxzMilcbmBgYCJ9 -->
+<pre class="r"><code>tail(Animals2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Miwic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFCblZTc1U3RE1CQjEyalJ0STBHUjJGRW50b2FCQVJoUUl3UkliSUNLQk9QVmNST0wxQTVPU29HZDcyRGdGeGdRQXpNRHpId0VIVmhaQUNlMnF4TGdwT2p1M3ZuZHZaeDl1SDI4Nmg2N0NLRXFzaXNXcXRaa2lHcEh2ZDNPT3BLSVRDeGtvMmJ1TCtTaFJSbms0THo4SEwrQkN2TUQ1YnVUNTl4ZXVoOXYxMHYzQjVQdXc4M2orZFBkaHIvd2Z2dnFicDVOZVJ1YVI5cksyNHJuTDJ0djYvcmVhbUVsSVRVR1E1TEtZS0VRbzBDN3o0TkxjNkF2Z0xJU3F5bjQySnRsT3JwUTM4RVJEUmpvdExVbDRJckdGRmc3ZzRRS0RUczl3Z1RCcHRsK0JER3drSml5MnhPRXROTklrTEZwZTBpQzlvQmZsTVhqR0ZJandZQnVBQmw0QXlIVnlleXpSS256SktPY1NWSWxYMzhySnhSbFpTYTIvc0dSYXZsam9JTUp5NlI0ZFNHV2Y0TFFINnhaUnQzRGdDT3lVb0tiM3NxQWhpUHhxMkNKRXRBYXNYejdRUWRISTNiYVdTc3BuOVBlbVlrcmFoR1ZMOTJxWlhaSWhPQm04emJCRVRjaTVlMm1FQktUamtFd3lrS1RZajRjeXY4MjBxVndEMklhTWcxVWc0U2FwaG1kdmlhMytIRXZnU3pTU0NObnp1UU9ZU0ZsWm1vdGhqNkpkVEl2WDEzeDZMeEUwT2xvVjZLcGwvRU00dWtRSGh0RVhkZm5ONjFzWFZLYkF3QUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["body"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["brain"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"3.000","2":"25.0","_rn_":"Echidna"},{"1":"160.000","2":"169.0","_rn_":"Brazilian tapir"},{"1":"0.900","2":"2.6","_rn_":"Tenrec"},{"1":"1.620","2":"11.4","_rn_":"Phalanger"},{"1":"0.104","2":"2.5","_rn_":"Tree shrew"},{"1":"4.235","2":"50.4","_rn_":"Red fox"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyKEFuaW1hbHMyKVxuYGBgIn0= -->
+<pre class="r"><code>str(Animals2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJ2RhdGEuZnJhbWUnOlx0NjUgb2JzLiBvZiAgMiB2YXJpYWJsZXM6XG4gJCBib2R5IDogbnVtICAxLjM1IDQ2NSAzNi4zMyAyNy42NiAxLjA0IC4uLlxuICQgYnJhaW46IG51bSAgOC4xIDQyMyAxMTkuNSAxMTUgNS41IC4uLlxuIn0= -->
+<pre><code>&#39;data.frame&#39;:   65 obs. of  2 variables:
+ $ body : num  1.35 465 36.33 27.66 1.04 ...
+ $ brain: num  8.1 423 119.5 115 5.5 ...</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2NcbiNWYW1vcyBhIHZlciBsb3Mgbm9tYnJlcyBkZSBtYW1tYWxzXG5yb3duYW1lcyhtYW1tYWxzKVxuYGBgIn0= -->
+<pre class="r"><code>#c
+#Vamos a ver los nombres de mammals
+rownames(mammals)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcIkFyY3RpYyBmb3hcIiAgICAgICAgICAgICAgICBcIk93bCBtb25rZXlcIiAgICAgICAgICAgICAgICBcIk1vdW50YWluIGJlYXZlclwiICAgICAgICAgIFxuIFs0XSBcIkNvd1wiICAgICAgICAgICAgICAgICAgICAgICBcIkdyZXkgd29sZlwiICAgICAgICAgICAgICAgICBcIkdvYXRcIiAgICAgICAgICAgICAgICAgICAgIFxuIFs3XSBcIlJvZSBkZWVyXCIgICAgICAgICAgICAgICAgICBcIkd1aW5lYSBwaWdcIiAgICAgICAgICAgICAgICBcIlZlcmJldFwiICAgICAgICAgICAgICAgICAgIFxuWzEwXSBcIkNoaW5jaGlsbGFcIiAgICAgICAgICAgICAgICBcIkdyb3VuZCBzcXVpcnJlbFwiICAgICAgICAgICBcIkFyY3RpYyBncm91bmQgc3F1aXJyZWxcIiAgIFxuWzEzXSBcIkFmcmljYW4gZ2lhbnQgcG91Y2hlZCByYXRcIiBcIkxlc3NlciBzaG9ydC10YWlsZWQgc2hyZXdcIiBcIlN0YXItbm9zZWQgbW9sZVwiICAgICAgICAgIFxuWzE2XSBcIk5pbmUtYmFuZGVkIGFybWFkaWxsb1wiICAgICBcIlRyZWUgaHlyYXhcIiAgICAgICAgICAgICAgICBcIk4uQS4gb3Bvc3N1bVwiICAgICAgICAgICAgIFxuWzE5XSBcIkFzaWFuIGVsZXBoYW50XCIgICAgICAgICAgICBcIkJpZyBicm93biBiYXRcIiAgICAgICAgICAgICBcIkRvbmtleVwiICAgICAgICAgICAgICAgICAgIFxuWzIyXSBcIkhvcnNlXCIgICAgICAgICAgICAgICAgICAgICBcIkV1cm9wZWFuIGhlZGdlaG9nXCIgICAgICAgICBcIlBhdGFzIG1vbmtleVwiICAgICAgICAgICAgIFxuWzI1XSBcIkNhdFwiICAgICAgICAgICAgICAgICAgICAgICBcIkdhbGFnb1wiICAgICAgICAgICAgICAgICAgICBcIkdlbmV0XCIgICAgICAgICAgICAgICAgICAgIFxuWzI4XSBcIkdpcmFmZmVcIiAgICAgICAgICAgICAgICAgICBcIkdvcmlsbGFcIiAgICAgICAgICAgICAgICAgICBcIkdyZXkgc2VhbFwiICAgICAgICAgICAgICAgIFxuWzMxXSBcIlJvY2sgaHlyYXgtYVwiICAgICAgICAgICAgICBcIkh1bWFuXCIgICAgICAgICAgICAgICAgICAgICBcIkFmcmljYW4gZWxlcGhhbnRcIiAgICAgICAgIFxuWzM0XSBcIldhdGVyIG9wb3NzdW1cIiAgICAgICAgICAgICBcIlJoZXN1cyBtb25rZXlcIiAgICAgICAgICAgICBcIkthbmdhcm9vXCIgICAgICAgICAgICAgICAgIFxuWzM3XSBcIlllbGxvdy1iZWxsaWVkIG1hcm1vdFwiICAgICBcIkdvbGRlbiBoYW1zdGVyXCIgICAgICAgICAgICBcIk1vdXNlXCIgICAgICAgICAgICAgICAgICAgIFxuWzQwXSBcIkxpdHRsZSBicm93biBiYXRcIiAgICAgICAgICBcIlNsb3cgbG9yaXNcIiAgICAgICAgICAgICAgICBcIk9rYXBpXCIgICAgICAgICAgICAgICAgICAgIFxuWzQzXSBcIlJhYmJpdFwiICAgICAgICAgICAgICAgICAgICBcIlNoZWVwXCIgICAgICAgICAgICAgICAgICAgICBcIkphZ3VhclwiICAgICAgICAgICAgICAgICAgIFxuWzQ2XSBcIkNoaW1wYW56ZWVcIiAgICAgICAgICAgICAgICBcIkJhYm9vblwiICAgICAgICAgICAgICAgICAgICBcIkRlc2VydCBoZWRnZWhvZ1wiICAgICAgICAgIFxuWzQ5XSBcIkdpYW50IGFybWFkaWxsb1wiICAgICAgICAgICBcIlJvY2sgaHlyYXgtYlwiICAgICAgICAgICAgICBcIlJhY2Nvb25cIiAgICAgICAgICAgICAgICAgIFxuWzUyXSBcIlJhdFwiICAgICAgICAgICAgICAgICAgICAgICBcIkUuIEFtZXJpY2FuIG1vbGVcIiAgICAgICAgICBcIk1vbGUgcmF0XCIgICAgICAgICAgICAgICAgIFxuWzU1XSBcIk11c2sgc2hyZXdcIiAgICAgICAgICAgICAgICBcIlBpZ1wiICAgICAgICAgICAgICAgICAgICAgICBcIkVjaGlkbmFcIiAgICAgICAgICAgICAgICAgIFxuWzU4XSBcIkJyYXppbGlhbiB0YXBpclwiICAgICAgICAgICBcIlRlbnJlY1wiICAgICAgICAgICAgICAgICAgICBcIlBoYWxhbmdlclwiICAgICAgICAgICAgICAgIFxuWzYxXSBcIlRyZWUgc2hyZXdcIiAgICAgICAgICAgICAgICBcIlJlZCBmb3hcIiAgICAgICAgICAgICAgICAgIFxuIn0= -->
+<pre><code> [1] &quot;Arctic fox&quot;                &quot;Owl monkey&quot;                &quot;Mountain beaver&quot;          
+ [4] &quot;Cow&quot;                       &quot;Grey wolf&quot;                 &quot;Goat&quot;                     
+ [7] &quot;Roe deer&quot;                  &quot;Guinea pig&quot;                &quot;Verbet&quot;                   
+[10] &quot;Chinchilla&quot;                &quot;Ground squirrel&quot;           &quot;Arctic ground squirrel&quot;   
+[13] &quot;African giant pouched rat&quot; &quot;Lesser short-tailed shrew&quot; &quot;Star-nosed mole&quot;          
+[16] &quot;Nine-banded armadillo&quot;     &quot;Tree hyrax&quot;                &quot;N.A. opossum&quot;             
+[19] &quot;Asian elephant&quot;            &quot;Big brown bat&quot;             &quot;Donkey&quot;                   
+[22] &quot;Horse&quot;                     &quot;European hedgehog&quot;         &quot;Patas monkey&quot;             
+[25] &quot;Cat&quot;                       &quot;Galago&quot;                    &quot;Genet&quot;                    
+[28] &quot;Giraffe&quot;                   &quot;Gorilla&quot;                   &quot;Grey seal&quot;                
+[31] &quot;Rock hyrax-a&quot;              &quot;Human&quot;                     &quot;African elephant&quot;         
+[34] &quot;Water opossum&quot;             &quot;Rhesus monkey&quot;             &quot;Kangaroo&quot;                 
+[37] &quot;Yellow-bellied marmot&quot;     &quot;Golden hamster&quot;            &quot;Mouse&quot;                    
+[40] &quot;Little brown bat&quot;          &quot;Slow loris&quot;                &quot;Okapi&quot;                    
+[43] &quot;Rabbit&quot;                    &quot;Sheep&quot;                     &quot;Jaguar&quot;                   
+[46] &quot;Chimpanzee&quot;                &quot;Baboon&quot;                    &quot;Desert hedgehog&quot;          
+[49] &quot;Giant armadillo&quot;           &quot;Rock hyrax-b&quot;              &quot;Raccoon&quot;                  
+[52] &quot;Rat&quot;                       &quot;E. American mole&quot;          &quot;Mole rat&quot;                 
+[55] &quot;Musk shrew&quot;                &quot;Pig&quot;                       &quot;Echidna&quot;                  
+[58] &quot;Brazilian tapir&quot;           &quot;Tenrec&quot;                    &quot;Phalanger&quot;                
+[61] &quot;Tree shrew&quot;                &quot;Red fox&quot;                  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbmFtZXMobWFtbWFscylcbmBgYCJ9 -->
+<pre class="r"><code>colnames(mammals)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiYm9keVwiICBcImJyYWluXCJcbiJ9 -->
+<pre><code>[1] &quot;body&quot;  &quot;brain&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1ZhbW9zIGEgdmVyIGxvcyBub21icmVzIGRlIEFuaW1hbHMyXG5cblxuYGBgIn0= -->
+<pre class="r"><code>#Vamos a ver los nombres de Animals2
 </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlRlbWEgMSBCb2xldGluIg0Kc3VidGl0bGU6IFRyYXRhbWllbnRvIGRlIERhdG9zLiBHcmFkbyBlbiBDaWVuY2lhIGRlIERhdG9zLSBVVg0KYXV0aG9yOiAiRGF2aWQgQWxlamFuZHJvIFBlZHJvemEgRGUgSmVzw7pzIg0KI1BvbmUgbGEgZmVjaGEgZGUgZ2VuZXJhY2nDs24gZGVsIGRvY3VtZW50bw0KZGF0ZTogICJgciBTeXMuRGF0ZSgpYCIgICNQb25kcsOtYSBsYSBmZWNoYSBkZWwgZMOtYSBhY3R1YWwNCiMgUGFyYSBxdWUgZW4gbHVnYXIgZGUgIkNvbnRlbnRzIiBwb25nYSAiSW5kaWNlIiBhbCBpbmNsdWlyIGxhIHRhYmxhIGRlIGNvbnRlbmlkbw0KDQpwYXJhbXM6DQogIGxhbmc6IEVTDQpsYW5nOiAiYHIgc3dpdGNoKHBhcmFtcyRsYW5nLCBFUyA9ICdlcy1FUycsIEVOID0gJ2VuLVVTJylgIg0KDQpvdXRwdXQ6DQogIHBkZl9kb2N1bWVudDoNCiAgICB0b2M6IHllcw0KICAgIHRvY19kZXB0aDogMw0KICAgIG51bWJlcl9zZWN0aW9uczogeWVzDQogIGh0bWxfbm90ZWJvb2s6DQogICAgZWNobzogeWVzDQogICAgbnVtYmVyX3NlY3Rpb25zOiB5ZXMNCiAgICB0b2M6IHllcw0KICBodG1sX2RvY3VtZW50Og0KICAgIGVjaG86IHllcw0KICAgIG51bWJlcl9zZWN0aW9uczogeWVzDQogICAgdGhlbWU6IGx1bWVuDQogICAgdG9jOiB5ZXMNCmxhbmd1YWdlOg0KICBsYWJlbDoNCiAgICBmaWc6ICdGaWd1cmEgJw0KICAgIHRhYjogJ1RhYmxhICcNCiAgICBlcTogJ0VjdWFjacOzbiAnDQogICAgdGhtOiAnVGVvcmVtYSAnDQogICAgbGVtOiAnTGVtYSAnDQogICAgZGVmOiAnRGVmaW5pY2nDs24gJw0KICAgIGNvcjogJ0Nvcm9sYXJpbyAnDQogICAgcHJwOiAnUHJvcG9zaWNpw7NuICcNCiAgICBleG06ICdFamVtcGxvICcNCiAgICBleHI6ICdFamVyY2ljaW8gJw0KICAgIHByb29mOiAnRGVtb3N0cmFjacOzbi4gJw0KICAgIHJlbWFyazogJ05vdGE6ICcNCiAgICBzb2x1dGlvbjogJ1NvbHVjacOzbi4gJw0KDQotLS0NCg0KDQpgYGB7ciBzZXR1cCwgY2FjaGUgPSBGLCBlY2hvID0gRiwgbWVzc2FnZSA9IEYsIHdhcm5pbmcgPSBGLCB0aWR5ID0gRn0NCg0KIyBDT05GSUdVUkFDScOTTiBHRU5FUkFMDQpsaWJyYXJ5KGtuaXRyKQ0Kb3B0aW9ucyh3aWR0aCA9IDEwMCkNCiMgT3BjaW9uZXMgZ2VuZXJhbGVzIGNodW5rcw0Kb3B0c19jaHVuayRzZXQoZWNobz1ULG1lc3NhZ2UgPSBGLCBlcnJvciA9IEYsIHdhcm5pbmcgPSBGLCBjb21tZW50ID0gTkEsIGZpZy5hbGlnbiA9ICdjZW50ZXInLCBkcGkgPSAxMDAsIHRpZHkgPSBGLCBjYWNoZS5wYXRoID0gJy5jYWNoZS8nLCBmaWcucGF0aCA9ICcuL2ZpZ3VyZS8nKQ0KDQojb3B0aW9ucyh4dGFibGUudHlwZSA9ICdodG1sJykNCmtuaXRfaG9va3Mkc2V0KGlubGluZSA9IGZ1bmN0aW9uKHgpIHsNCiAgDQogIGlmKGlzLm51bWVyaWMoeCkpIHsNCiAgICByb3VuZCh4LCBnZXRPcHRpb24oJ2RpZ2l0cycpKQ0KICB9IGVsc2Ugew0KICAgIHBhc3RlKGFzLmNoYXJhY3Rlcih4KSwgY29sbGFwc2UgPSAnLCAnKQ0KICB9DQp9KQ0KI2tuaXRfaG9va3Mkc2V0KHBsb3QgPSBrbml0cjo6Omhvb2tfcGxvdF9odG1sKQ0KYGBgDQoNCjEuIENvbnNpZGVyYSBsb3MgY29uanVudG9zIGRlIGRhdG9zIG1hbW1hbHMgZGVsIHBhcXVldGUgTUFTUyB5IEFuaW1hbHMyIGRlbCBwYXF1ZXRlIHJvYnVzdGJhc2UuDQoNCmEuIE1pcmEgbGEgbGFzIGNhcmFjdGVyw61zdGljYXMgZGUgYW1ib3MgY29uanVudG9zIHVzYW5kbyBsYSBheXVkYS4NCmIuIFVzYSBsYXMgZnVuY2lvbmVzIGRpbSwgaGVhZCwgdGFpbCwgc3RyIHBhcmEgdW5hIHByaW1lcmEgdmlzacOzbiBkZSBsb3MgY29uanVudG9zIGRlIGRhdG9zLg0KYy4gTXVlc3RyYSBsb3Mgbm9tYnJlcyBkZSBsYXMgZmlsYXMgeSBsYXMgY29sdW1uYXMgKHJvd25hbWVzLCBjb2xuYW1lcykNCmQuIFVzYSBsYSBmdW5jacOzbiBpbnRlcnNlY3QgeSBhbG1hY2VuYSBlbiBsYSB2YXJpYWJsZSBjb21tb25BbmltYWxzIGxvcyBhbWluYWxlcyBxdWUgYXBhcmV6Y2FuDQplbiBhbWJvcyBjb25qdW50b3MNCmUuIFVzYSBzZXRkaWZmIHBhcmEgYXZlcmlndWFyIHF1w6kgYW5pbWFsZXMgbm8gZXN0w6FuIGVuIGFtYm9zIGNvbmp1bnRvcy4gwr9DdcOhbnRvcyBzb24gPy4gwr9RdcOpIHRpcG8NCmRlIGFuaW1hbGVzIHNvbj8NCmYuIERldGVybWluYSBsYXMgZGlmZXJlbmNpYSBlbnRyZSBsb3MgYW5pbWFsZXMgcXVlIG5vIGFwYXJlY2VuIGVuIGFtYm9zIGNvbmp1bnRvcy4NCg0KYGBge3J9DQpsaWJyYXJ5KE1BU1MpDQpsaWJyYXJ5KHJvYnVzdGJhc2UpDQptYW1tPC1kYXRhKCJtYW1tYWxzIikNCmFuaW1hbGVzPC1kYXRhKCJBbmltYWxzMiIpDQojYSBWZXJlbW9zIHF1ZSBub3MgZGljZSBlbCBjb21hbmRvIGF5dWRhDQpoZWxwKG1hbW1hbHMpI1JlbGFjaW9uIGVudHJlIGVsIHRhbWHDsW8gZGVsIGN1ZXJwbyB5IGVsIGNlcmVicm8NCmhlbHAoQW5pbWFsczIpI0xhIG1pc21hIHJlbGFjaW9uIHBlcm8gdGllbmUgNjUgZXNwZWNpZXMNCg0KYGBgDQoNCg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlRlbWEgMSBCb2xldGluIg0Kc3VidGl0bGU6IFRyYXRhbWllbnRvIGRlIERhdG9zLiBHcmFkbyBlbiBDaWVuY2lhIGRlIERhdG9zLSBVVg0KYXV0aG9yOiAiRGF2aWQgQWxlamFuZHJvIFBlZHJvemEgRGUgSmVzw7pzIg0KI1BvbmUgbGEgZmVjaGEgZGUgZ2VuZXJhY2nDs24gZGVsIGRvY3VtZW50bw0KZGF0ZTogICJgciBTeXMuRGF0ZSgpYCIgICNQb25kcsOtYSBsYSBmZWNoYSBkZWwgZMOtYSBhY3R1YWwNCiMgUGFyYSBxdWUgZW4gbHVnYXIgZGUgIkNvbnRlbnRzIiBwb25nYSAiSW5kaWNlIiBhbCBpbmNsdWlyIGxhIHRhYmxhIGRlIGNvbnRlbmlkbw0KDQpwYXJhbXM6DQogIGxhbmc6IEVTDQpsYW5nOiAiYHIgc3dpdGNoKHBhcmFtcyRsYW5nLCBFUyA9ICdlcy1FUycsIEVOID0gJ2VuLVVTJylgIg0KDQpvdXRwdXQ6DQogIHBkZl9kb2N1bWVudDoNCiAgICB0b2M6IHllcw0KICAgIHRvY19kZXB0aDogMw0KICAgIG51bWJlcl9zZWN0aW9uczogeWVzDQogIGh0bWxfbm90ZWJvb2s6DQogICAgZWNobzogeWVzDQogICAgbnVtYmVyX3NlY3Rpb25zOiB5ZXMNCiAgICB0b2M6IHllcw0KICBodG1sX2RvY3VtZW50Og0KICAgIGVjaG86IHllcw0KICAgIG51bWJlcl9zZWN0aW9uczogeWVzDQogICAgdGhlbWU6IGx1bWVuDQogICAgdG9jOiB5ZXMNCmxhbmd1YWdlOg0KICBsYWJlbDoNCiAgICBmaWc6ICdGaWd1cmEgJw0KICAgIHRhYjogJ1RhYmxhICcNCiAgICBlcTogJ0VjdWFjacOzbiAnDQogICAgdGhtOiAnVGVvcmVtYSAnDQogICAgbGVtOiAnTGVtYSAnDQogICAgZGVmOiAnRGVmaW5pY2nDs24gJw0KICAgIGNvcjogJ0Nvcm9sYXJpbyAnDQogICAgcHJwOiAnUHJvcG9zaWNpw7NuICcNCiAgICBleG06ICdFamVtcGxvICcNCiAgICBleHI6ICdFamVyY2ljaW8gJw0KICAgIHByb29mOiAnRGVtb3N0cmFjacOzbi4gJw0KICAgIHJlbWFyazogJ05vdGE6ICcNCiAgICBzb2x1dGlvbjogJ1NvbHVjacOzbi4gJw0KDQotLS0NCg0KDQpgYGB7ciBzZXR1cCwgY2FjaGUgPSBGLCBlY2hvID0gRiwgbWVzc2FnZSA9IEYsIHdhcm5pbmcgPSBGLCB0aWR5ID0gRn0NCg0KIyBDT05GSUdVUkFDScOTTiBHRU5FUkFMDQpsaWJyYXJ5KGtuaXRyKQ0Kb3B0aW9ucyh3aWR0aCA9IDEwMCkNCiMgT3BjaW9uZXMgZ2VuZXJhbGVzIGNodW5rcw0Kb3B0c19jaHVuayRzZXQoZWNobz1ULG1lc3NhZ2UgPSBGLCBlcnJvciA9IEYsIHdhcm5pbmcgPSBGLCBjb21tZW50ID0gTkEsIGZpZy5hbGlnbiA9ICdjZW50ZXInLCBkcGkgPSAxMDAsIHRpZHkgPSBGLCBjYWNoZS5wYXRoID0gJy5jYWNoZS8nLCBmaWcucGF0aCA9ICcuL2ZpZ3VyZS8nKQ0KDQojb3B0aW9ucyh4dGFibGUudHlwZSA9ICdodG1sJykNCmtuaXRfaG9va3Mkc2V0KGlubGluZSA9IGZ1bmN0aW9uKHgpIHsNCiAgDQogIGlmKGlzLm51bWVyaWMoeCkpIHsNCiAgICByb3VuZCh4LCBnZXRPcHRpb24oJ2RpZ2l0cycpKQ0KICB9IGVsc2Ugew0KICAgIHBhc3RlKGFzLmNoYXJhY3Rlcih4KSwgY29sbGFwc2UgPSAnLCAnKQ0KICB9DQp9KQ0KI2tuaXRfaG9va3Mkc2V0KHBsb3QgPSBrbml0cjo6Omhvb2tfcGxvdF9odG1sKQ0KYGBgDQoNCjEuIENvbnNpZGVyYSBsb3MgY29uanVudG9zIGRlIGRhdG9zIG1hbW1hbHMgZGVsIHBhcXVldGUgTUFTUyB5IEFuaW1hbHMyIGRlbCBwYXF1ZXRlIHJvYnVzdGJhc2UuDQoNCmEuIE1pcmEgbGEgbGFzIGNhcmFjdGVyw61zdGljYXMgZGUgYW1ib3MgY29uanVudG9zIHVzYW5kbyBsYSBheXVkYS4NCmIuIFVzYSBsYXMgZnVuY2lvbmVzIGRpbSwgaGVhZCwgdGFpbCwgc3RyIHBhcmEgdW5hIHByaW1lcmEgdmlzacOzbiBkZSBsb3MgY29uanVudG9zIGRlIGRhdG9zLg0KYy4gTXVlc3RyYSBsb3Mgbm9tYnJlcyBkZSBsYXMgZmlsYXMgeSBsYXMgY29sdW1uYXMgKHJvd25hbWVzLCBjb2xuYW1lcykNCmQuIFVzYSBsYSBmdW5jacOzbiBpbnRlcnNlY3QgeSBhbG1hY2VuYSBlbiBsYSB2YXJpYWJsZSBjb21tb25BbmltYWxzIGxvcyBhbWluYWxlcyBxdWUgYXBhcmV6Y2FuDQplbiBhbWJvcyBjb25qdW50b3MNCmUuIFVzYSBzZXRkaWZmIHBhcmEgYXZlcmlndWFyIHF1w6kgYW5pbWFsZXMgbm8gZXN0w6FuIGVuIGFtYm9zIGNvbmp1bnRvcy4gwr9DdcOhbnRvcyBzb24gPy4gwr9RdcOpIHRpcG8NCmRlIGFuaW1hbGVzIHNvbj8NCmYuIERldGVybWluYSBsYXMgZGlmZXJlbmNpYSBlbnRyZSBsb3MgYW5pbWFsZXMgcXVlIG5vIGFwYXJlY2VuIGVuIGFtYm9zIGNvbmp1bnRvcy4NCg0KYGBge3J9DQpsaWJyYXJ5KE1BU1MpDQpsaWJyYXJ5KHJvYnVzdGJhc2UpDQpkYXRhKCJtYW1tYWxzIikNCmRhdGEoIkFuaW1hbHMyIikNCiNhIFZlcmVtb3MgcXVlIG5vcyBkaWNlIGVsIGNvbWFuZG8gYXl1ZGENCmhlbHAobWFtbWFscykjUmVsYWNpb24gZW50cmUgZWwgdGFtYcOxbyBkZWwgY3VlcnBvIHkgZWwgY2VyZWJybw0KaGVscChBbmltYWxzMikjTGEgbWlzbWEgcmVsYWNpb24gcGVybyB0aWVuZSA2NSBlc3BlY2llcw0KDQojYg0KI1BhcmEgZWwgY29uanVudG8gbWFtbWFscw0KZGltKG1hbW1hbHMpDQpoZWFkKG1hbW1hbHMpDQp0YWlsKG1hbW1hbHMpDQpzdHIobWFtbWFscykNCg0KI1BhcmEgZWwgb3RybyBjb25qdW50bw0KZGltKEFuaW1hbHMyKQ0KaGVhZChBbmltYWxzMikNCnRhaWwoQW5pbWFsczIpDQpzdHIoQW5pbWFsczIpDQoNCiNjDQojVmFtb3MgYSB2ZXIgbG9zIG5vbWJyZXMgZGUgbWFtbWFscw0Kcm93bmFtZXMobWFtbWFscykNCmNvbG5hbWVzKG1hbW1hbHMpDQoNCiNWYW1vcyBhIHZlciBsb3Mgbm9tYnJlcyBkZSBBbmltYWxzMg0Kcm93bmFtZXMoQW5pbWFsczIpDQpjb2xuYW1lcyhBbmltYWxzMikNCg0KI2QNCiNEZWJlbW9zIHVzYXIgbGEgZnVuY2nDs24gY29uIGVsIG5vbWJyZSBkZSBsYXMgZmlsYXMNCmNvbW1vbkFuaW1hbHMgPC0gaW50ZXJzZWN0KHJvd25hbWVzKEFuaW1hbHMyKSwgcm93bmFtZXMobWFtbWFscykpDQoNCg0KDQpgYGANCg0KDQo=</div>
 
 
 
