@@ -154,8 +154,8 @@ str(libReturn)#Es una lista de 3 elementos,que su vez tiene un vector de caracte
 #b
 head(libReturn$results,n = 5L)#Mostramos el vector de  de chr
 
-
-
+#c
+dim(libReturn$results)#Podemos ver que son 193 librerías
 
 ```
 
