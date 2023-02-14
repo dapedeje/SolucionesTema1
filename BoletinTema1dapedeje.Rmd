@@ -77,11 +77,39 @@ f. Determina las diferencia entre los animales que no aparecen en ambos conjunto
 ```{r}
 library(MASS)
 library(robustbase)
-mamm<-data("mammals")
-animales<-data("Animals2")
+data("mammals")
+data("Animals2")
 #a Veremos que nos dice el comando ayuda
 help(mammals)#Relacion entre el tamaño del cuerpo y el cerebro
 help(Animals2)#La misma relacion pero tiene 65 especies
+
+#b
+#Para el conjunto mammals
+dim(mammals)
+head(mammals)
+tail(mammals)
+str(mammals)
+
+#Para el otro conjunto
+dim(Animals2)
+head(Animals2)
+tail(Animals2)
+str(Animals2)
+
+#c
+#Vamos a ver los nombres de mammals
+rownames(mammals)
+colnames(mammals)
+
+#Vamos a ver los nombres de Animals2
+rownames(Animals2)
+colnames(Animals2)
+
+#d
+#Debemos usar la función con el nombre de las filas
+commonAnimals <- intersect(rownames(Animals2), rownames(mammals))
+
+
 
 ```
 
