@@ -121,4 +121,37 @@ anifalt#Podemos ver que son dinosaurios y animales articos
 
 ```
 
+2. La funcion qqPlot del paquete car puede ser utilizada para determinar gráficamente si una serie
+de puntos siguen una distribución de datos Gaussiana. Si las muestras están dentro de las líneas
+discontinuas podemos indicar que siguen una distribución Gaussiana con un 95 % de confianza.
+Utilizando esta función representa el logaritmo neperiano (log) del peso del cerebro (brain weigths)
+del registro de datos mammals del paquete MASS y conjunto de datos Animals2 de la librería
+robustbase. ¿Presentan el mismo comportamiento ?.¿Podríamos decir que siguen una distribución
+Gaussiana ?
+
+```{r}
+library(car)
+#Para el conjuto de datos mammals
+qqPlot(log(mammals$brain), main = "QQ plot - Mammals")
+#Para el otro conjunto
+qqPlot(log(Animals2$brain), main = "QQ plot - Animals2")
+#Podemos ver que esta si sigue una distribución gausiana, ya que en ambos la 
+#mayoria de los puntos se encuentran dentro de lineas discontinuas,pero algunos 
+#los puntos de los extremos se van un poco
+
+```
+3. La función library sin argumentos abre una ventana y muestra las librerías que han sido instaladas.
+a. Asigna el valor devuelto por esta función a la variable libReturn y observa su estructura.
+b. Uno de los elementos de la lista es una matriz de caracteres. Muestra por pantalla los 5 primeros
+elementos de esta matriz usando la función head.
+c. Determina el número de librerías que tienes instaladas.
+
+```{r}
+#a
+libReturn<- library()
+str(libReturn)#Es una lista de 3 elementos,que su vez tiene un vector de caracteres
+
+
+
+```
 
