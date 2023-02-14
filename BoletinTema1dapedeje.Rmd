@@ -1,7 +1,7 @@
 ---
-title: "Tema 1"
+title: "Tema 1 Boletin"
 subtitle: Tratamiento de Datos. Grado en Ciencia de Datos- UV
-author: "Marcelino Martínez"
+author: "David Alejandro Pedroza De Jesús"
 #Pone la fecha de generación del documento
 date:  "`r Sys.Date()`"  #Pondría la fecha del día actual
 # Para que en lugar de "Contents" ponga "Indice" al incluir la tabla de contenido
@@ -62,87 +62,5 @@ knit_hooks$set(inline = function(x) {
 })
 #knit_hooks$set(plot = knitr:::hook_plot_html)
 ```
-
-
-# Introducción.
-
-Representaciones gráficas del tema 1
-
-# Apartado I. Instalación automática de paquetes
-
-Incluimos todas las librerías necesarias para la ejecucion del código en la siguiente lista. **packages = c("tidyverse","knitr",...)**
-
-Si la librería no está instalada se instalará y cargará, sino solo se cargará.
-
-
-```{r}
-# Especificamos las librerías necesarias en esta lista
-
-packages = c("MASS","knitr","tidyverse","car")
-
-#use this function to check if each package is on the local machine
-#if a package is installed, it will be loaded
-#if any are not, the missing package(s) will be installed and loaded
-package.check <- lapply(packages, FUN = function(x) {
-  if (!require(x, character.only = TRUE)) {
-    install.packages(x, dependencies = TRUE)
-    library(x, character.only = TRUE)
-  }
-})
-
-#verify they are loaded
-search()
-
-```
-
-<!-- # Apartado II. Crea un proyecto. -->
-
-<!-- Para cada tarea crea un nuevo proyecto con, al menos, una carpeta *./data*, que contenga los datos y otra **./figure** (puedes usar carpetas adicionales para organizar la información **./program**, etc) -->
-
-
-<!-- ```{r} -->
-
-
-
-<!-- ``` -->
-
-## Eleccion de un correcta visualización
-
-```{r}
-library(MASS)
-library(car)
-par(mfrow=c(2,2))
-truehist(mammals$brain)
-truehist(log(mammals$brain))
-qqPlot(mammals$brain)
-title("Normal QQ-plot")
-qqPlot(log(mammals$brain))
-title("Normal QQ-plot")
-
-
-```
-
-### Subsubapartado. Cómo incluir figuras
-
-
-
-```{r rmarkdown, echo=FALSE, out.width='30%', fig.align='center', fig.cap='Logo ETSE (desde archivo PNG).'}
-knitr::include_graphics("figure/logoETSE.png")
-```
-### Subsubapartado. La numeración es automática
-```{r rmarkdown2, echo=FALSE, out.width='10%', fig.align='center', fig.cap='Logo GCD (desde archivo pdf).'}
-knitr::include_graphics("figure/logoGCD.pdf")
-```
-
-
-# Apartado III
-
-
-```{r}
-
-
-
-```
-
 
 
