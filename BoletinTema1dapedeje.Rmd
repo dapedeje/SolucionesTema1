@@ -151,6 +151,10 @@ c. Determina el número de librerías que tienes instaladas.
 libReturn<- library()
 str(libReturn)#Es una lista de 3 elementos,que su vez tiene un vector de caracteres
 
+#b
+head(libReturn$results,n = 5L)#Mostramos el vector de  de chr
+
+
 
 
 ```
