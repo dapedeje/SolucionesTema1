@@ -193,9 +193,17 @@ sum(is.na(Chile))#Valores perdidos
 #Podemos ver que Chile si que tiene valores perdidos, pero cabbages no
 summary(Chile)
 summary(cabbages)
+```
+5. Muchas pruebas estadísticas suponen que los datos siguen una distribución Gaussiana. Utiliza la
+aproximación visual proporcionada por qqPlot para determinar si podemos asumir que las variables
+HeadWt y VitC del conjunto cabbages verifican esta condición.
 
-
-
+```{r}
+#vamos a verificar que los datos siguen una dist.Gaussiana 
+qqPlot(cabbages$HeadWt)
+qqPlot(cabbages$VitC)
+#Podemos ver que ambos siguen una distribución Gaussiana, salvo por unos valores
+#en los extremos los cuales se salen un poco de rango
 
 ```
 
