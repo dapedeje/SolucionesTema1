@@ -188,7 +188,11 @@ library(carData)
 data(Chile)#Cargar los datos
 help(Chile)#Comprender el problema
 mosaicplot(Chile$sex~Chile$vote)#Analisis exploratorio lo que conlleva hacer un gráfico.
-sum(is.na(cabbages))#Valores perdios
+sum(is.na(Chile))#Valores perdidos
+#Apartado d
+#Podemos ver que Chile si que tiene valores perdidos, pero cabbages no
+summary(Chile)
+summary(cabbages)
 
 
 
