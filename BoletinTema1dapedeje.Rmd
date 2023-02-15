@@ -3,6 +3,9 @@ title: "Boletin Tema 1"
 author: "David Alejandro Pedroza De Jesús"
 date: "2023-02-15"
 output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
@@ -25,16 +28,22 @@ knit_hooks$set(inline = function(x) {
 #knit_hooks$set(plot = knitr:::hook_plot_html)
 ```
 
-1. Considera los conjuntos de datos mammals del paquete MASS y Animals2 del paquete robustbase.
+1.  Considera los conjuntos de datos mammals del paquete MASS y Animals2
+    del paquete robustbase.
 
-a. Mira la las características de ambos conjuntos usando la ayuda.
-b. Usa las funciones dim, head, tail, str para una primera visión de los conjuntos de datos.
-c. Muestra los nombres de las filas y las columnas (rownames, colnames)
-d. Usa la función intersect y almacena en la variable commonAnimals los aminales que aparezcan
-en ambos conjuntos
-e. Usa setdiff para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son ?. ¿Qué tipo
-de animales son?
-f. Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
+```{=html}
+<!-- -->
+```
+a.  Mira la las características de ambos conjuntos usando la ayuda.
+b.  Usa las funciones dim, head, tail, str para una primera visión de
+    los conjuntos de datos.
+c.  Muestra los nombres de las filas y las columnas (rownames, colnames)
+d.  Usa la función intersect y almacena en la variable commonAnimals los
+    aminales que aparezcan en ambos conjuntos
+e.  Usa setdiff para averiguar qué animales no están en ambos conjuntos.
+    ¿Cuántos son ?. ¿Qué tipo de animales son?
+f.  Determina las diferencia entre los animales que no aparecen en ambos
+    conjuntos.
 
 ```{r}
 library(MASS)
@@ -83,13 +92,16 @@ anifalt#Podemos ver que son dinosaurios y animales articos
 
 ```
 
-2. La funcion qqPlot del paquete car puede ser utilizada para determinar gráficamente si una serie
-de puntos siguen una distribución de datos Gaussiana. Si las muestras están dentro de las líneas
-discontinuas podemos indicar que siguen una distribución Gaussiana con un 95 % de confianza.
-Utilizando esta función representa el logaritmo neperiano (log) del peso del cerebro (brain weigths)
-del registro de datos mammals del paquete MASS y conjunto de datos Animals2 de la librería
-robustbase. ¿Presentan el mismo comportamiento ?.¿Podríamos decir que siguen una distribución
-Gaussiana ?
+2.  La funcion qqPlot del paquete car puede ser utilizada para
+    determinar gráficamente si una serie de puntos siguen una
+    distribución de datos Gaussiana. Si las muestras están dentro de las
+    líneas discontinuas podemos indicar que siguen una distribución
+    Gaussiana con un 95 % de confianza. Utilizando esta función
+    representa el logaritmo neperiano (log) del peso del cerebro (brain
+    weigths) del registro de datos mammals del paquete MASS y conjunto
+    de datos Animals2 de la librería robustbase. ¿Presentan el mismo
+    comportamiento ?.¿Podríamos decir que siguen una distribución
+    Gaussiana ?
 
 ```{r}
 library(car)
@@ -102,11 +114,19 @@ qqPlot(log(Animals2$brain), main = "QQ plot - Animals2")
 #los puntos de los extremos se van un poco
 
 ```
-3. La función library sin argumentos abre una ventana y muestra las librerías que han sido instaladas.
-a. Asigna el valor devuelto por esta función a la variable libReturn y observa su estructura.
-b. Uno de los elementos de la lista es una matriz de caracteres. Muestra por pantalla los 5 primeros
-elementos de esta matriz usando la función head.
-c. Determina el número de librerías que tienes instaladas.
+
+3.  La función library sin argumentos abre una ventana y muestra las
+    librerías que han sido instaladas.
+
+```{=html}
+<!-- -->
+```
+a.  Asigna el valor devuelto por esta función a la variable libReturn y
+    observa su estructura.
+b.  Uno de los elementos de la lista es una matriz de caracteres.
+    Muestra por pantalla los 5 primeros elementos de esta matriz usando
+    la función head.
+c.  Determina el número de librerías que tienes instaladas.
 
 ```{r}
 #a
@@ -120,23 +140,30 @@ head(libReturn$results,n = 5L)#Mostramos el vector de  de chr
 dim(libReturn$results)#Podemos ver que son 193 librerías
 
 ```
-4. En las transparencias del tema 1 se citan los primeros pasos a seguir cuando se analiza un nuevo
-conjunto de datos.
-a. Determina las tres primeras etapas para el conjunto de datos cabbages del paquete MASS
-b. Puedes determinar el número de valores perdidos (almacenados como NA en R) usando la función
-is.na. Determina el número de valores perdidos para cada una de las variables del conjunto
-cabbages.
-c. Repite los apartados anteriores con el conjunto de datos Chile del paquete carData.
-d. Utiliza la función summary, sobre cabbages y Chile y observa como, además de otros
-estadísticos, también devuelve el número de valores perdidos de cada variable.
+
+4.  En las transparencias del tema 1 se citan los primeros pasos a
+    seguir cuando se analiza un nuevo conjunto de datos.
+
+```{=html}
+<!-- -->
+```
+a.  Determina las tres primeras etapas para el conjunto de datos
+    cabbages del paquete MASS
+b.  Puedes determinar el número de valores perdidos (almacenados como NA
+    en R) usando la función is.na. Determina el número de valores
+    perdidos para cada una de las variables del conjunto cabbages.
+c.  Repite los apartados anteriores con el conjunto de datos Chile del
+    paquete carData.
+d.  Utiliza la función summary, sobre cabbages y Chile y observa como,
+    además de otros estadísticos, también devuelve el número de valores
+    perdidos de cada variable.
 
 Apartado a.
 
 Podemos ver que los primeros pasos serian:
 
-*Comprender el problema a tratar 
-*Limpiar los datos 
-*El analisis exploratorio
+*Comprender el problema a tratar* Limpiar los datos \*El analisis
+exploratorio
 
 ```{r}
 data(cabbages)#Cargaremos los datos
@@ -156,9 +183,11 @@ sum(is.na(Chile))#Valores perdidos
 summary(Chile)
 summary(cabbages)
 ```
-5. Muchas pruebas estadísticas suponen que los datos siguen una distribución Gaussiana. Utiliza la
-aproximación visual proporcionada por qqPlot para determinar si podemos asumir que las variables
-HeadWt y VitC del conjunto cabbages verifican esta condición.
+
+5.  Muchas pruebas estadísticas suponen que los datos siguen una
+    distribución Gaussiana. Utiliza la aproximación visual proporcionada
+    por qqPlot para determinar si podemos asumir que las variables
+    HeadWt y VitC del conjunto cabbages verifican esta condición.
 
 ```{r}
 #vamos a verificar que los datos siguen una dist.Gaussiana 
@@ -168,10 +197,13 @@ qqPlot(cabbages$VitC)
 #en los extremos los cuales se salen un poco de rango
 
 ```
-6. Una representación habitual, para determinar la distribución de los datos de una variable cuantitativa
-es el histograma (hist). Determina, de forma aproximada, utilizando el histograma, si hay diferencias
-entre los contenidos de vitamina C (VitC), para las diferentes variedades de calabaza (variable Cult),
-en el conjunto de datos cabbages.
+
+6.  Una representación habitual, para determinar la distribución de los
+    datos de una variable cuantitativa es el histograma (hist).
+    Determina, de forma aproximada, utilizando el histograma, si hay
+    diferencias entre los contenidos de vitamina C (VitC), para las
+    diferentes variedades de calabaza (variable Cult), en el conjunto de
+    datos cabbages.
 
 ```{r}
 cult_values<- unique(unique(cabbages$Cult))
@@ -185,13 +217,17 @@ for (i in 1:length(cult_values)) {
        ylab = "Frecuencia",col = i,main = i )
 }
 ```
-7. Un modelo sencillo para relacionar variables es la predicción lineal. En el siguiente ejemplo se utiliza el
-conjunto de datos whiteside, de la librería MASS. Esta aproximación propone un modelo que predice
-una variable a partir de otra. Una primera etapa para plantear esta aproximación sería representar
-ambas variables mediante un diagrama de dispersión (Gráfico XY) y determinar si la relación entre
-variables “parece” lineal. Si es así, podemos plantear un modelo lineal (en este caso según un factor),
-donde se aprecia claramente que existe una relación lineal entre las dos variables consideradas. Observa
-y ejecuta el siguiente código.
+
+7.  Un modelo sencillo para relacionar variables es la predicción
+    lineal. En el siguiente ejemplo se utiliza el conjunto de datos
+    whiteside, de la librería MASS. Esta aproximación propone un modelo
+    que predice una variable a partir de otra. Una primera etapa para
+    plantear esta aproximación sería representar ambas variables
+    mediante un diagrama de dispersión (Gráfico XY) y determinar si la
+    relación entre variables "parece" lineal. Si es así, podemos
+    plantear un modelo lineal (en este caso según un factor), donde se
+    aprecia claramente que existe una relación lineal entre las dos
+    variables consideradas. Observa y ejecuta el siguiente código.
 
 ```{r}
 
@@ -208,18 +244,47 @@ abline(Model1, lty=2)
 abline(Model2)
 
 ```
-a. Utiliza un procedimiento análogo para determinar si se aprecia una relación lineal entre los niveles de
-vitamina C, VitC en función del peso de la calabaza, HeadWt, en el conjunto de datos cabbages.
-b. Repite el apartado anterior, pero obteniendo un modelo para cada una de las dos variedades de calabaza,
-Cult. VerParámetros básicos plot.
-c. Usa summary con cada uno de los modelos obtenidos y observa Coefficients. Dado que hemos
-planteado un modelo y = mx+n, donde y = V itC y x = HeadW t. La función lm nos permite obtener
-(Intercept); n y la pendiente HeadWt; m (además de otros parámetros adicionales que evalúan la
-caracterísiticas del modelo). Observa que en todos los casos, la pendiene es negativa indicando que las
-calabazas de más peso contienen menos vitamina C. No te preocupes por el resto de parámetros del
-modelo, por el momento.
+
+a.  Utiliza un procedimiento análogo para determinar si se aprecia una
+    relación lineal entre los niveles de vitamina C, VitC en función del
+    peso de la calabaza, HeadWt, en el conjunto de datos cabbages.
+b.  Repite el apartado anterior, pero obteniendo un modelo para cada una
+    de las dos variedades de calabaza, Cult. VerParámetros básicos plot.
+c.  Usa summary con cada uno de los modelos obtenidos y observa
+    Coefficients. Dado que hemos planteado un modelo y = mx+n, donde y =
+    V itC y x = HeadW t. La función lm nos permite obtener (Intercept);
+    n y la pendiente HeadWt; m (además de otros parámetros adicionales
+    que evalúan la caracterísiticas del modelo). Observa que en todos
+    los casos, la pendiene es negativa indicando que las calabazas de
+    más peso contienen menos vitamina C. No te preocupes por el resto de
+    parámetros del modelo, por el momento.
 
 ```{r}
+#Apartado a
+#Haremos un gráfico de dispersión
+plot(cabbages$VitC, cabbages$HeadWt, ylab = "Peso", xlab = "vitamina C") 
+abline(lm(cabbages$HeadWt~cabbages$VitC))
+#Podemos ver que si que sigue una distribución más o menos líneal
+
+#Apartado b
+# Planteamos 2 modelos lineales, uno para los datos de cada factor
+Model1 <- lm(HeadWt ~ VitC, data = cabbages, subset = which(Cult  == "c52"))
+Model2 <- lm(HeadWt ~ VitC, data = cabbages, subset = which(Cult  == "c39"))
+
+#Hacemos el plot de tal formas que podemos distinguir para cada modelo 
+plot(cabbages$VitC, cabbages$HeadWt, ylab = "Peso", xlab = "vitamina C",
+     pch=c(6,16)[cabbages$Cult])
+legend(x="topright",legend=c("tipo = c52  ","tipo = c39 "), pch=c(6,16))
+
+
+abline(Model1, col = "Red")
+abline(Model2,lty=2)
+
+#C
+#Podemos ver que 
+summary(Model1)
+summary(Model2)
+#y notamos lo que la pendiente es negativa, por lo tanto podemos afirmar que mientrar mayor sea el peso, menor será la cantidad de vitamina c
+
 
 ```
-
