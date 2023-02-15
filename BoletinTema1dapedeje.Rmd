@@ -183,6 +183,12 @@ plot(cabbages$VitC,cabbages$HeadWt)#Analisis exploratorio lo que conlleva hacer 
 
 #Apartado b
 sum(is.na(cabbages))#Sumamos los valores True y vemos que son 0
+#Apartado c
+library(carData)
+data(Chile)#Cargar los datos
+help(Chile)#Comprender el problema
+mosaicplot(Chile$sex~Chile$vote)#Analisis exploratorio lo que conlleva hacer un gráfico.
+
 
 ```
 
