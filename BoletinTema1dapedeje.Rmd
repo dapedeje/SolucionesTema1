@@ -188,6 +188,9 @@ library(carData)
 data(Chile)#Cargar los datos
 help(Chile)#Comprender el problema
 mosaicplot(Chile$sex~Chile$vote)#Analisis exploratorio lo que conlleva hacer un gráfico.
+sum(is.na(cabbages))#Valores perdios
+
+
 
 
 ```
