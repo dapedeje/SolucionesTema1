@@ -179,6 +179,8 @@ Podemos ver que los primeros pasos serian:
 ```{r}
 data(cabbages)#Cargaremos los datos
 help(cabbages)#Comprender el problema
+plot(cabbages$VitC,cabbages$HeadWt)#Analisis exploratorio lo que conlleva hacer un gráfico
+
 
 ```
 
