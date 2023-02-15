@@ -181,6 +181,8 @@ data(cabbages)#Cargaremos los datos
 help(cabbages)#Comprender el problema
 plot(cabbages$VitC,cabbages$HeadWt)#Analisis exploratorio lo que conlleva hacer un gráfico
 
+#Apartado b
+sum(is.na(cabbages))#Sumamos los valores True y vemos que son 0
 
 ```
 
